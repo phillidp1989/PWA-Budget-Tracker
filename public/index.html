@@ -10,6 +10,10 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="styles.css">
   <link rel="manifest" href="dist/manifest.json">
+  <!-- ios support -->
+  <link rel="apple-touch-icon" href="./dist/assets/icons/icon_128x128.png">
+  <meta name="apple-mobile-web-app-status-bar" content="#FFE1C4">
+  <meta name="theme-color" content="#FFE1C4">
 
   <title>Budget Tracker</title>
 </head>
@@ -44,5 +48,17 @@
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
   <script src="./dist/bundle.js"></script>
+  <script type="text/javascript">
+  (async () => {
+    if('serviceWorker' in navigator) {
+      try {
+        const registration = await navigator.serviceWorker.register('./sw.js', { scope: '/' });
+        console.log('Service worker has registered successfully');  
+      } catch (err) {
+        console.log('Service worker registration has failed', err);
+      }   
+    }
+  })();    
+  </script>
 </body>
 </html>
