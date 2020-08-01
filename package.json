@@ -9,7 +9,8 @@
     "lite-server": "lite-server",
     "dev": "nodemon server.js",
     "webpack": "webpack",
-    "prestart": "npm run webpack"
+    "prestart": "npm run webpack",
+    "heroku-prebuild": "npm install --dev"
   },
   "repository": {
     "type": "git",
