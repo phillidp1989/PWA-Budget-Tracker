@@ -11,7 +11,7 @@ const FILES_TO_CACHE = [
   "/dist/assets/icons/icon_512x512.png",
 ];
 
-const PRECACHE = "precache-v2";
+const PRECACHE = "precache-v6";
 const RUNTIME = "runtime";
 
 // Function to open cache and add assets
