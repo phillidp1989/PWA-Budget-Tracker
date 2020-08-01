@@ -4,14 +4,12 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "webpack": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "lite-server": "lite-server",
-    "dev": "nodemon server.js",
-    "webpack": "webpack",
     "prestart": "npm run webpack",
-    "heroku-prebuild": "npm install --dev",
-    "heroku-postbuild": "webpack -p"
+    "lite-server": "lite-server",
+    "heroku-prebuild": "npm install --dev"
   },
   "repository": {
     "type": "git",
