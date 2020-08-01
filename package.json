@@ -10,7 +10,8 @@
     "dev": "nodemon server.js",
     "webpack": "webpack",
     "prestart": "npm run webpack",
-    "heroku-prebuild": "npm install --dev"
+    "heroku-prebuild": "npm install --dev",
+    "heroku-postbuild": "webpack -p"
   },
   "repository": {
     "type": "git",
