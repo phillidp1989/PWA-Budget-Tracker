@@ -21,7 +21,9 @@
 [Author](#author)
 
 ## Description:
-This app keeps track of a user's budget. The user can add transactions which either add or subtract a specified amount from the total. The transactions will then be presented in a line chart using chart.js. \n\nThis app is a progressive web app meaning it can be downloaded to your computer or smartphone and be used when offline. Assets are cached using a service worker and a manifest contains app information for offline use when installed.\n\nWhere a user attempts to add a transaction when offline, the post request will be stored using indexedDB and will then be posted to the MongoDB database when the app is back online.
+The deployed app can be found at http://immense-hamlet-11887.herokuapp.com/.
+
+This app keeps track of a user's budget. The user can add transactions which either add or subtract a specified amount from the total. The transactions will then be presented in a line chart using chart.js. This app is a progressive web app meaning it can be downloaded to your computer or smartphone and be used when offline. Assets are cached using a service worker and a manifest contains app information for offline use when installed. Where a user attempts to add a transaction when offline, the post request will be stored using indexedDB and will then be posted to the MongoDB database when the app is back online.
 
 ## Visuals:
 ![screenshot](https://github.com/phillidp1989/PWA-Budget-Tracker/blob/master/public/assets/images/demo.gif)
