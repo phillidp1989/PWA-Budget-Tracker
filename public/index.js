@@ -17,19 +17,17 @@ request.onsuccess = (event) => {
 };
 
 request.onerror = (event) => {
-  console.log("There has been an error: " + event.target.errorCode);
+  console.error("There has been an error: " + event.target.errorCode);
 };
 
 const saveRecord = (record) => {
   // Creation of transaction on the pending object store with readwrite access
-  console.log(record);
   const transaction = db.transaction(["pending"], "readwrite");
   const store = transaction.objectStore("pending");
   store.add(record);
 };
 
-const checkDatabase = () => {
-  console.log("Checking database");
+const checkDatabase = () => {  
   const transaction = db.transaction(["pending"], "readwrite");
   const store = transaction.objectStore("pending");
   const getAll = store.getAll();
@@ -55,7 +53,7 @@ const checkDatabase = () => {
           // clear all items in your store
           store.clear();
         });
-    };
+    }
   };
 };
 
@@ -199,8 +197,7 @@ function sendTransaction(isAdding) {
       }
     })
     .catch((err) => {
-      // fetch failed, so save in indexed db
-      console.log(transaction);
+      // fetch failed, so save in indexed db      
       saveRecord(transaction);
 
       // clear form
