@@ -37,6 +37,6 @@
     "babel-core": "^6.26.3",
     "babel-loader": "^8.1.0",
     "babel-polyfill": "^6.26.0",
-    "nodemon": "^2.0.4"    
+    "nodemon": "^2.0.4"
   }
 }
