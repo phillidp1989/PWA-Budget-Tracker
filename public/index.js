@@ -93,17 +93,13 @@ function populateTable() {
   transactions.forEach((transaction) => {
     // create and populate a table row
     let tr = document.createElement("tr");
-    if (transaction.value > 0) {
-      tr.innerHTML = `
+    const sign = transaction.value > 0 ? '+' : '-';
+    const plusMinus = transaction.value > 0 ? 'plus' : 'minus';
+    tr.innerHTML = `
         <td>${transaction.name}</td>
-        <td class="plus">£${transaction.value}</td>
+        <td class="${plusMinus}">${sign}£${Math.abs(transaction.value)}</td>
       `;
-    } else {
-      tr.innerHTML = `
-        <td>${transaction.name}</td>
-        <td class="minus">£${transaction.value}</td>
-      `;
-    }
+    
 
     tbody.appendChild(tr);
   });
