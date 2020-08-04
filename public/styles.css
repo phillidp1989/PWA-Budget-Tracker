@@ -49,3 +49,23 @@ tr:nth-child(even) {
   width: 90%;
   margin: 0 auto;
 }
+
+.plus {
+  border-right: 10px solid #2ecc71;
+}
+
+.minus {
+  border-right: 10px solid #c0392b;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: #9c88ff;
+  box-shadow: var(--box-shadow) !important;
+  color: #fff;
+  border: 0;  
+  font-size: 16px;
+  margin: 10px 0 30px;
+  padding: 10px;
+  width: auto;
+}

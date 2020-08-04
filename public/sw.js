@@ -12,7 +12,7 @@ const FILES_TO_CACHE = [
 ];
 
 // Cache for stattic assets
-const PRECACHE = "precache-v8";
+const PRECACHE = "precache-v9";
 // Dynamic cache
 const RUNTIME = "runtime";
 
