@@ -11,20 +11,18 @@ const FILES_TO_CACHE = [
   "/dist/assets/icons/icon_512x512.png",
 ];
 
-const PRECACHE = "precache-v6";
+// Cache for stattic assets
+const PRECACHE = "precache-v8";
+// Dynamic cache
 const RUNTIME = "runtime";
 
-// Function to open cache and add assets
-const cacheResources = async (cacheName, assets) => {
-  const cache = await caches.open(cacheName);
-  await cache.addAll(assets);
-  self.skipWaiting();
-  return;
-};
-
 // Install event
-self.addEventListener("install", (event) => {
-  event.waitUntil(cacheResources(PRECACHE, FILES_TO_CACHE));
+self.addEventListener("install", event => {
+  event.waitUntil(
+    caches.open(PRECACHE)
+      .then(cache => cache.addAll(FILES_TO_CACHE))
+      .then(self.skipWaiting())
+  );
 });
 
 // Activate event which deletes old caches if replaced with new version
